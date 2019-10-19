@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.DetailActivity">
+
+    <include layout="@layout/content_detail"/>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/ab_detail"
+        android:layout_height="180dp"
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/header_thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textColor="#fff"
+            android:textSize="28sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="18dp">
+
+            <TextView
+                android:id="@+id/release_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:textColor="#fff"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1">
+
+                <RatingBar
+                    android:id="@+id/rb_votes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:foregroundGravity="bottom"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:padding="2dp"
+                    android:stepSize="0.1"/>
+
+                <TextView
+                    android:id="@+id/votes_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:padding="20dp"
+                    android:textAlignment="textEnd"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/votes_avarage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textSize="40sp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_detail"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
